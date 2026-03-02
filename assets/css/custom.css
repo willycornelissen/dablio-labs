@@ -1,0 +1,9 @@
+/* Custom styles for titles to match danicat.dev */
+h1, h2, h3, h4, h5, h6 {
+    color: rgb(var(--color-primary-600)) !important;
+    font-weight: 800;
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    color: rgb(var(--color-primary-400)) !important;
+}
