@@ -1,7 +1,7 @@
 +++
 date = '2026-03-03T08:25:57-03:00'
 draft = false
-title = 'Pgn Viewer'
+title = 'PGN Viewer'
 +++
 
 # Visualizador de Xadrez PGN
