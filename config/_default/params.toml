@@ -45,14 +45,14 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 
 [footer]
   showMenu = true
-  showCopyright = true
+  showCopyright = false
   showThemeAttribution = true
   showAppearanceSwitcher = true
   showScrollToTop = true
 
 [homepage]
-  layout = "hero" # valid options: page, profile, hero, card, background, custom
-  #homepageImage = "IMAGE.jpg" # used in: hero, and card
+  layout = "profile" # valid options: page, profile, hero, card, background, custom
+  homepageImage = "img/showmethecode.webp" # used in: hero, and card
   showRecent = true
   showRecentItems = 5
   showMoreLink = false
@@ -60,7 +60,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   cardView = false
   cardViewScreenWidth = false
   layoutBackgroundBlur = false # only used when layout equals background
-  disableHeroImageFilter = false # only used when layout equals hero
+  disableHeroImageFilter = true # only used when layout equals hero
 
 [article]
   showDate = true
@@ -183,7 +183,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 
 [author]
   name = "Seu Nome"
-  image = "img/perfil.png"
+  image = "showmethecode.webp"
   headline = "Uma breve descrição que aparecerá logo abaixo do título."
   links = [
     { github = "https://github.com/seu-usuario" },

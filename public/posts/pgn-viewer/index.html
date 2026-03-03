@@ -15,8 +15,8 @@
 
   
   
-    <title>PGN Viewer &middot; willy.dev.br</title>
-    <meta name="title" content="PGN Viewer &middot; willy.dev.br">
+    <title>Pgn Viewer &middot; willy.dev.br</title>
+    <meta name="title" content="Pgn Viewer &middot; willy.dev.br">
   
 
   
@@ -26,7 +26,7 @@
   
   
   
-  <link rel="canonical" href="http://localhost:1313/posts/meu-primeiro-projeto/">
+  <link rel="canonical" href="http://localhost:1313/posts/pgn-viewer/">
   
 
   
@@ -54,19 +54,19 @@
   
 
   
-  <meta property="og:url" content="http://localhost:1313/posts/meu-primeiro-projeto/">
+  <meta property="og:url" content="http://localhost:1313/posts/pgn-viewer/">
   <meta property="og:site_name" content="willy.dev.br">
-  <meta property="og:title" content="PGN Viewer">
+  <meta property="og:title" content="Pgn Viewer">
   <meta property="og:description" content="Willy Garabini Cornelissen">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2026-03-02T10:17:59-03:00">
-    <meta property="article:modified_time" content="2026-03-02T10:17:59-03:00">
+    <meta property="article:published_time" content="2026-03-03T08:25:57-03:00">
+    <meta property="article:modified_time" content="2026-03-03T08:25:57-03:00">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="PGN Viewer">
+  <meta name="twitter:title" content="Pgn Viewer">
   <meta name="twitter:description" content="Willy Garabini Cornelissen">
 
   
@@ -223,25 +223,25 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "PGN Viewer",
-    "headline": "PGN Viewer",
+    "name": "Pgn Viewer",
+    "headline": "Pgn Viewer",
     
     "inLanguage": "en",
-    "url" : "http://localhost:1313/posts/meu-primeiro-projeto/",
+    "url" : "http://localhost:1313/posts/pgn-viewer/",
     "author" : {
       "@type": "Person",
       "name": "Willy Garabini Cornelissen"
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-03-02T10:17:59-03:00",
-    "datePublished": "2026-03-02T10:17:59-03:00",
+    "dateCreated": "2026-03-03T08:25:57-03:00",
+    "datePublished": "2026-03-03T08:25:57-03:00",
     
-    "dateModified": "2026-03-02T10:17:59-03:00",
+    "dateModified": "2026-03-03T08:25:57-03:00",
     
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "0"
+    "wordCount": "387"
   }]
   </script>
 
@@ -467,7 +467,7 @@
     <header id="single_header" class="mt-5 max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        PGN Viewer
+        Pgn Viewer
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -498,7 +498,11 @@
   
 
   
+    
+  
 
+  
+    
   
 
   
@@ -515,7 +519,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-03-02T10:17:59-03:00">2 March 2026</time>
+      <time datetime="2026-03-03T08:25:57-03:00">3 March 2026</time><span class="px-2 text-primary-500">&middot;</span><span>387 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
     
 
     
@@ -655,6 +659,136 @@
 
         <div class="article-content max-w-prose mb-20">
           
+<h1 class="relative group">Visualizador de Xadrez PGN
+    <div id="visualizador-de-xadrez-pgn" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#visualizador-de-xadrez-pgn" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Este projeto é uma aplicação desktop leve e intuitiva para visualizar jogos de xadrez armazenados em arquivos no formato PGN (<em>Portable Game Notation</em>).</p>
+
+<h2 class="relative group">🚀 Solução Tecnológica
+    <div id="-solução-tecnológica" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#-solu%c3%a7%c3%a3o-tecnol%c3%b3gica" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>A aplicação foi desenvolvida utilizando a linguagem <strong>Python 3</strong>, escolhida pela sua robustez no processamento de dados e vasta disponibilidade de bibliotecas especializadas. Os pilares da solução são:</p>
+<ol>
+<li><strong>python-chess</strong>: Uma biblioteca poderosa que lida com toda a lógica das regras do xadrez, validação de movimentos e, crucialmente, o parsing (leitura) de arquivos PGN complexos.</li>
+<li><strong>Pygame</strong>: Utilizado para a interface gráfica (GUI). O Pygame oferece controle total sobre a renderização de quadros, permitindo uma navegação fluida e responsiva entre as jogadas.</li>
+<li><strong>Sistema Híbrido de Renderização</strong>: O código foi projetado para ser resiliente. Ele prioriza o uso de imagens PNG profissionais (se presentes na pasta <code>assets/</code>), mas possui um motor de desenho vetorial integrado que gera as peças matematicamente caso os arquivos de imagem estejam ausentes.</li>
+</ol>
+
+<h2 class="relative group">🛠️ Pré-requisitos
+    <div id="-pré-requisitos" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#-pr%c3%a9-requisitos" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>Python 3.10 ou superior.</li>
+<li>Ambiente Linux/WSL (recomendado) ou Windows/macOS.</li>
+</ul>
+
+<h2 class="relative group">📦 Instalação
+    <div id="-instalação" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#-instala%c3%a7%c3%a3o" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ol>
+<li><strong>Clone ou baixe</strong> este repositório.</li>
+<li><strong>Crie e ative um ambiente virtual</strong> (recomendado para evitar conflitos):
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">python3 -m venv venv
+</span></span><span class="line"><span class="cl"><span class="nb">source</span> venv/bin/activate  <span class="c1"># No Linux/macOS</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ou</span>
+</span></span><span class="line"><span class="cl">.<span class="se">\v</span>env<span class="se">\S</span>cripts<span class="se">\a</span>ctivate   <span class="c1"># No Windows</span></span></span></code></pre></div></div>
+</li>
+<li><strong>Instale as dependências</strong>:
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pip install pygame python-chess</span></span></code></pre></div></div>
+</li>
+</ol>
+
+<h2 class="relative group">🎨 Personalização Visual (Opcional)
+    <div id="-personalização-visual-opcional" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#-personaliza%c3%a7%c3%a3o-visual-opcional" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Para obter um visual profissional (estilo Lichess/Chess.com), você pode baixar imagens das peças e colocá-las em uma pasta chamada <code>assets/</code> no diretório raiz do projeto. O script reconhecerá automaticamente os seguintes nomes:</p>
+<ul>
+<li>Brancas: <code>wK.png</code>, <code>wQ.png</code>, <code>wR.png</code>, <code>wB.png</code>, <code>wN.png</code>, <code>wP.png</code></li>
+<li>Pretas: <code>bK.png</code>, <code>bQ.png</code>, <code>bR.png</code>, <code>bB.png</code>, <code>bN.png</code>, <code>bP.png</code></li>
+</ul>
+
+<h2 class="relative group">📖 Documentação do Usuário
+    <div id="-documentação-do-usuário" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#-documenta%c3%a7%c3%a3o-do-usu%c3%a1rio" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">Como Executar
+    <div id="como-executar" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#como-executar" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Abra o terminal na pasta do projeto e execute o comando passando o caminho do arquivo PGN que deseja visualizar:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">python pgn_viewer.py caminho/do/seu/arquivo.pgn</span></span></code></pre></div></div>
+
+<h3 class="relative group">Controles de Navegação
+    <div id="controles-de-navegação" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#controles-de-navega%c3%a7%c3%a3o" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Uma vez que a janela do tabuleiro abrir, utilize o teclado para interagir:</p>
+<ul>
+<li><strong>Seta para a Direita (→)</strong>: Avança para a próxima jogada do jogo.</li>
+<li><strong>Seta para a Esquerda (←)</strong>: Retrocede para a jogada anterior.</li>
+<li><strong>Tecla ESC</strong>: Fecha a aplicação.</li>
+</ul>
+
+<h3 class="relative group">Funcionalidades Especiais
+    <div id="funcionalidades-especiais" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#funcionalidades-especiais" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li><strong>Destaque de Movimento</strong>: O tabuleiro destaca automaticamente a casa de origem e a casa de destino do último movimento realizado, facilitando o acompanhamento da partida.</li>
+<li><strong>Renderização Dinâmica</strong>: Se você não possuir arquivos de imagem, o sistema desenhará peças estilizadas automaticamente para garantir que você possa estudar suas partidas sem interrupções.</li>
+</ul>
+
           
           
           
